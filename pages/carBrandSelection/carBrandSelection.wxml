@@ -1,0 +1,29 @@
+<scroll-view scroll-y scroll-into-view="{{alpha}}" style="height: 100%;">
+	<view class="alpha__item" wx:if="{{hotList.length}}">
+		<view class="alpha__item__hd">热门品牌</view>
+		<view class="hot__list">
+			<block wx:for="{{hotList}}" wx:key="{{item.id}}">
+				<view class="hot__list__item" bindtap="chooseCarInfo" data-brand_id="{{item.id}}" data-brand_name="{{item.brand_name}}">
+					<image src="{{host}}{{item.logo_url}}"></image>
+					<text>{{item.brand_name}}</text>
+				</view>
+			</block>
+		</view>
+	</view>
+	<view wx:for="{{alphabetList}}" wx:for-item="alpha" wx:key="{{alpha}}" id="{{alpha}}" class="alpha__item">
+		<view class="alpha__item__hd">{{alpha}}</view>
+		<view class="alpha__item__bd">
+			<block wx:for="{{list[alpha]}}">
+				<view bindtap="chooseCarInfo" data-brand_name="{{item.brand_name}}">
+					<image wx:if="{{item.logo_url}}" src="{{host}}{{item.logo_url}}" mode="aspectFit"></image>
+					<image wx:else src="" mode="aspectFit"></image>
+					<text>{{item.brand_name}}</text>
+				</view>
+			</block>
+		</view>		
+	</view>
+</scroll-view>
+
+<view class="alpha__selection">
+	<view wx:for="{{alphabetList}}" wx:key="{{item}}" data-ap="{{item}}" bindtap="handlerAlphaTap">{{item}}</view>
+</view>

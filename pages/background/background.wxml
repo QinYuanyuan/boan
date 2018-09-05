@@ -1,0 +1,15 @@
+  <image class="background-bottom" src="/image/background_bottom.png"></image>  
+ <image class="background-top" src="/image/background_top.gif" bindtap='toIndex' wx:if="{{pageType !== 'index'}}"></image> 
+
+<block wx:if="{{pageType === 'index'}}">
+  <view class="vin-container">
+    <view class="vin-title">VIN</view>
+    <view class="line"></view>
+    <input placeholder-class='placeholder' placeholder='在此输入您的17位车架号' maxlength='17' value='{{inputValue}}' confirm-type="done" bindinput='inputEvent' bindconfirm='confirmEvent'></input>
+  </view>
+
+  <!-- <view class="wait-bg" wx:if="{{showGif}}">
+    <image src="/image/identify.gif"></image>
+    <view class="text">识别中，请稍后</view>
+  </view> -->
+</block>

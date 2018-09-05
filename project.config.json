@@ -1,0 +1,79 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wxfe89aa1848aaa1c5",
+	"projectname": "BOAN2",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "match-policy",
+					"pathName": "pages/match-policy/match-policy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "background",
+					"pathName": "pages/background/background",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "carBrand",
+					"pathName": "pages/carBrandSelection/carBrandSelection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "carSeries",
+					"pathName": "pages/carInfoSelection/carInfoSelection",
+					"query": "brand_name=起亚"
+				},
+				{
+					"id": -1,
+					"name": "从表单页面进入首页",
+					"pathName": "pages/background/background",
+					"query": "pageType=index"
+				},
+				{
+					"id": -1,
+					"name": "vin识别结果展示页面",
+					"pathName": "pages/vin-result/vin-result",
+					"query": ""
+				}
+			]
+		}
+	}
+}

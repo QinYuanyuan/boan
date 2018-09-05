@@ -1,0 +1,73 @@
+<view>
+  <!--车型的基本信息  -->
+  <view class="car-info">
+    <view class="car-info__top">
+      <view class="car-info__logo">
+        <image src="{{host}}{{logoUrl}}"></image>
+      </view>
+
+      <view class="car-info__name">
+        <view>{{carModelStr}}</view>
+        <view>
+          <image src="/image/location.png"></image>
+          <text>{{province}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="car-info__detail">
+      <view>
+        <image class="icon" src="/image/time.png"></image>
+        <text>上牌 {{firstDate}}</text>
+      </view>
+      <view>
+        <image class="icon" src="/image/distance.png"></image>
+        <text>里程 {{distance}}万公里</text>
+      </view>
+      <view>
+        <image class="icon" src="/image/money.png"></image>
+        <text>现价 {{currentPrice}}万元</text>
+      </view>
+    </view>
+  </view>
+
+  <!--套餐信息  -->
+  <view class="policy-info">
+    <view class="policy-info__price">
+      <view class="price-outer">
+        <view class="policy-time no-bottom no-right title">产品信息</view>
+        <view class="policy-price no-bottom no-right title">价格</view>
+        <view class="policy-desc no-bottom title">说明</view>
+      </view>
+      <view class="price-outer">
+        <view class="policy-time no-bottom no-right">1年或2万公里</view>
+        <view class="policy-price no-right no-bottom">¥ {{oneYearPrice}}</view>
+        <view class="policy-desc no-bottom">适用行驶里程在16万公里以内的车辆</view>
+      </view>
+      <view class="price-outer">
+        <view class="policy-time no-bottom no-right">2年或4万公里</view>
+        <view class="policy-price no-right no-bottom">¥ {{twoYearPrice}}</view>
+        <view class="policy-desc no-bottom">适用行驶里程在14万公里以内的车辆</view>
+      </view>
+      <view class="price-outer">
+        <view class="policy-time no-right">3年或6万公里</view>
+        <view class="policy-price">¥ {{threeYearPrice}}</view>
+        <view class="policy-desc">适用行驶里程在12万公里以内的车辆</view>
+      </view>
+
+      <view class="text">具体产品介绍请致电
+        <text>400 068 6905</text>
+      </view>
+    </view>
+
+    <view class="concat-us" bindtap='makePhoneFn'>
+      <view class="content">
+        <image src="/image/phone.png" class="concat-icon"></image>
+        <view>联系</view>
+        <view>我们</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

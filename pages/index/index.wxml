@@ -1,0 +1,79 @@
+<view class='container'>
+
+  <view class='city'>
+    <text class='title'>省份</text>
+    <image src='/image/location.png'></image>
+    <picker class="city__name" mode="selector" range="{{range}}" value="{{region}}" bindchange="bindRegionChange">
+      <view>
+        <text>{{sLocation}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <view class='model'>
+    <view>
+      <text class='title'>车型</text>
+      <view class='model__content' bindtap='selectModelFn'>
+        <view class='model__content__outer'>
+          <view class='model__content__left' wx:if='{{carModelInfo}}'>{{carModelInfo}}</view>
+          <view class='model__content__right' wx:else>选择车型</view>
+        </view>
+        <view class='arrow-icon' bindtap='selectModelFn'></view>
+      </view>
+    </view>
+  </view>
+
+  <view class='first-date'>
+    <text class='title'>首次上牌</text>
+    <picker mode="multiSelector" range="{{firstDateData}}" value="{{dateRegion}}" bindchange="bindDateChange" bindcolumnchange="bindcolumnchange">
+      <view class='content'>
+        <text class='content__right' wx:if='{{!sFirstDate}}'>选择日期(10年以内)</text>
+        <text style='color:#000;' wx:else>{{sFirstDate}}</text>
+        <view class='arrow-icon'></view>
+      </view>
+    </picker>
+  </view>
+
+  <view class='distance'>
+    <text class='title'>行驶里程</text>
+    <view class="outer-box">
+      <input type='digit' maxlength='6' data-type='distance' value='{{sDistance}}' bindinput='distanceInputFn' class="{{showDistanceWarn ? 'focus' : ''}}"></input>
+      <view class="content {{showDistanceWarn ? 'focus' : ''}}">
+        <text>万公里</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="distance-warn" wx:if="{{showDistanceWarn}}">
+     <image src='/image/warning.png'></image> 
+    <view>暂不支持里程16万以上的汽车</view>
+  </view>
+
+  <view class='current-price'>
+    <text class='title'>市场现价</text>
+    <view class="outer-box" bindtap='priceInputFn'>
+      <!-- <input type='digit' maxlength='6' data-type='currentPrice' value='{{sCurrentPrice}}' bindinput='priceInputFn' class="{{showPriceWarn ? 'focus' : ''}}"></input> -->
+      <view class="{{showPriceWarn ? 'focus current-price-box' : 'current-price-box'}}">{{sCurrentPrice}}</view>
+      <view class="content {{showPriceWarn ? 'focus' : ''}}">
+        <text>万元</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="current-price-warn" wx:if="{{showPriceWarn}}">
+     <image src='/image/warning.png'></image> 
+    <view><text wx:if="{{showPriceTop}}">暂不支持现价115万元以上的汽车</text><text wx:if="{{!showPriceTop}}">暂不支持现价1.53万元以下的汽车</text></view>
+  </view>
+</view>
+
+<view class="{{enableMatchBtn ? 'match-btn' : 'match-btn disable-btn'}}" bindtap='matchFn'>匹配产品</view>
+
+<view class="gif-container" wx:if="{{showGif}}">
+  <image src='/image/identify.gif'></image>
+  <view>查询中，请稍后</view>
+</view> 
+
+<view class="gif-container" wx:if="{{showSuccess}}">
+  <image class='correct-icon' src='/image/correct.png'></image>
+  <view class='correct-text'>查询成功！</view>
+</view>

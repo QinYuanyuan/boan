@@ -1,0 +1,26 @@
+<view class="info">
+	<view class="info__title">已选信息</view>
+	<view class="info__content">
+		<view class="info__content__item" bindtap="deleteBrand">
+			<view class="info__content__item__detail">{{vehicle.brand_name}}</view>
+			<image class="icon--cross" src="/image/icon-cross.png" mode="aspectFit"></image>
+		</view>
+		<view class="info__content__item" wx:if="{{vehicle.series_name}}" bindtap="deleteSeries">
+			<view class="info__content__item__detail">{{vehicle.series_name}}</view>
+			<image class="icon--cross" src="/image/icon-cross.png" mode="aspectFit"></image>
+		</view>
+	</view>
+</view>
+
+<!-- 选择车系 -->
+<view class="selection">
+	<block wx:for="{{seriesList}}">
+		<view class="selection__title">{{item.sub_brand_name}}</view>
+			<view class="selection__content">
+				<view bindtap="chooseSeries" data-sub_brand_id="{{item.id}}" data-sub_brand_name="{{item.sub_brand_name}}" wx:for="{{item.series}}" wx:for-item="series"
+					data-series_id="{{series.id}}" data-series_name="{{series.series_name}}" class="selection__content__item">
+					{{series.series_name}}
+				</view>
+			</view>
+	</block>
+</view>

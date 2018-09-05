@@ -1,0 +1,188 @@
+.car-info{
+  box-sizing: border-box;
+  padding: 30rpx 30rpx 0 30rpx;
+  width: 750rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+.car-info__top{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.car-info__top .car-info__logo{
+  margin-right: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border: 1rpx solid #ddd;
+  border-radius: 50%;
+}
+.car-info__top .car-info__logo image{
+  width: 55rpx;
+  height: 55rpx;
+  vertical-align: -15%;
+}
+.car-info__top .car-info__name view{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.car-info__top .car-info__name image{
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: middle;
+}
+.icon{
+  margin-right: 4rpx;
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: -2%;
+}
+
+.car-info .car-info__detail{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-top: 1rpx solid #ddd;
+  font-size: 24rpx;
+}
+.car-info .car-info__detail > view{
+  width: 33%;
+  text-align: center;
+}
+
+/*套餐信息  */
+.policy-info{
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  width: 750rpx;
+  padding-bottom: 30rpx;
+
+}
+.policy-info .policy-info__tab{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.policy-info .policy-info__tab view{
+  box-sizing: border-box;
+  width: 49%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background-color: #ddd;
+  
+}
+.policy-info .policy-info__tab view.active{
+  background-color: #fff;
+}
+.policy-info .policy-info__tab view.active text{
+  display: inline-block;
+  width: 200rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f90a05;
+  color: #f90a05;
+}
+
+.policy-info .policy-info__introduction{
+  padding: 40rpx 30rpx;
+  font-size: 28rpx;
+  color: #353535;
+  background-color: #fff;
+}
+.policy-info__price{
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.policy-info__price .price-outer{
+  width: 690rpx;
+  display: flex;
+  flex-direction: row;
+}
+.policy-info__price .price-outer.title{
+  color: #5c5c5c;
+}
+
+.policy-info__price .policy-time, .policy-info__price .policy-price, .policy-info__price .policy-desc{
+  width: 210rpx;
+  border: 1rpx solid #eee;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #f90a05;
+}
+.policy-info__price .no-bottom{
+  border-bottom: transparent;
+}
+.policy-info__price .no-right{
+  border-right: transparent;
+}
+.policy-info__price .policy-time{
+  width: 200rpx;
+  color: #353535;
+}
+.policy-info__price .policy-time.title, .policy-info__price .policy-price.title{
+  color: #5c5c5c;
+}
+.policy-info__price .policy-desc{
+  width: 280rpx;
+  line-height: 30rpx;
+  color: #353535;
+  font-size: 24rpx;
+  padding-top: 12rpx;
+}
+.policy-info__price .policy-desc.title{
+  line-height: 88rpx;
+  font-size: 30rpx;
+  padding-top: 0;
+}
+
+.policy-info__price .text{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #353535;
+  font-size: 28rpx;
+}
+.policy-info__price .text text{
+  color: #f90a05;
+}
+
+.concat-us {
+  position: fixed;
+  bottom: 200rpx;
+  right: 30rpx;
+  padding: 0;
+  height: 88rpx;
+  width: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  color: #f90a05;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 1;
+}
+.concat-us .concat-icon {
+  height: 26rpx;
+  width: 26rpx;
+}

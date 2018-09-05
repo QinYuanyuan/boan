@@ -1,0 +1,23 @@
+<view class="vin-container">
+  <view wx:for="{{vin}}" wx:for-item="item" wx:for-index="index">{{item}}</view>
+</view>
+
+<block wx:if="{{!noResult}}">
+  <view class="text">为您查询到
+    <text style='color: #f90a05;'>{{num}}</text> 条车型，请选择您的爱车车型。</view>
+
+  <view class='vin-result'>
+    <view class="one-result" wx:for="{{modelLists}}" wx:for-item="item" wx:for-index="index" data-index='{{index}}' data-value="{{item.NewCarValue}}" bindtap='selectModelFn'>
+      <view class="number">{{index + 1}}</view>
+      <view style='overflow:hidden;'>{{item.CarName}}</view>
+      <view class="arrow"></view>
+    </view>
+  </view>
+</block>
+
+<view class="no-result" wx:if="{{noResult}}">
+  <image src='/image/no-result.png'></image>
+  <view class="fail-text">查询失败</view>
+  <view class="tip">没有找到您的车辆信息，请检查您输入的信息或者您的车辆暂无产品。</view>
+  <view class="go-back-btn" bindtap='goBackFn'>返回</view>
+</view>

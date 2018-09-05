@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/background/background",
+    "pages/index/index",
+    "pages/carInfoSelection/carInfoSelection",
+    "pages/carBrandSelection/carBrandSelection",
+    "pages/match-policy/match-policy",
+    "pages/vin-result/vin-result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f90a05",
+    "navigationBarTitleText": "臻享一世",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}
